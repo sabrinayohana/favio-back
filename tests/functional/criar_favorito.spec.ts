@@ -17,4 +17,13 @@ test.group('Criar favoritos', () => {
   })
 })
 
-
+  test('criar favorito com campo faltante', async ({ client }) => {
+    const resposta = await client
+      .post('/favoritos')
+      .json({
+        url: 'www.ifrn.edu.br',
+        importante: false
+      });
+    resposta.assertStatus(400); 
+  });
+});
