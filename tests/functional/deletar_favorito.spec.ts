@@ -8,4 +8,6 @@ test.group('Deletar favorito', () => {
   })
 
   test ('deletar favorito inexistente', )
-})
+
+test ('deletar favorito existente', )
+}) 
